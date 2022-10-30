@@ -1,3 +1,5 @@
+@import '../../variables.module.scss';
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -5,4 +7,85 @@
 	width: 100%;
 	padding: 1rem 0;
 	color: #fff;
+}
+
+.logo {
+	font-family: Mazzard-Medium;
+	font-size: 1.4rem;
+}
+
+.menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2.5rem;
+
+	@media (max-width: $sm) {
+		display: none;
+
+		& {
+			position: fixed;
+			top: 0;
+			right: -100%;
+			gap: 0;
+			flex-direction: column;
+			transition: 0.3s;
+
+			&.active {
+				right: 0;
+			}
+
+			li {
+				margin: 1rem 0;
+			}
+		}
+	}
+}
+
+.hamburger {
+	display: none;
+	cursor: pointer;
+
+	.bar {
+		display: block;
+		width: 32px;
+		height: 2px;
+		margin: 5px auto;
+		transition: all 0.3s ease-in-out;
+		background: #fff;
+		text-align: center;
+	}
+
+	&.active {
+		.bar:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		.bar:nth-child(2) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+
+	@media (max-width: $sm) {
+		display: block;
+	}
+}
+
+.career {
+	font-family: Mazzard-SemiBold;
+	color: #000;
+	background: #fff;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.5);
+	transition: 0.3s all ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0px 0px 59px rgba(42, 7, 254, 1);
+	}
 }

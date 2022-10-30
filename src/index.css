@@ -1,20 +1,29 @@
 @font-face {
 	font-family: Mazzard-Regular;
-	src: url('./assets/fonts/MazzardM-Regular.ttf');
+	src: url('./fonts/MazzardM-Regular.ttf');
+	font-weight: 400;
 }
 
 @font-face {
 	font-family: Mazzard-Medium;
-	src: url('./assets/fonts/MazzardM-Medium.ttf');
+	src: url('./fonts/MazzardM-Medium.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Mazzard-SemiBold;
+	src: url('./fonts/MazzardM-SemiBold.ttf');
+	font-weight: 600;
 }
 
 @font-face {
 	font-family: Mazzard-Bold;
-	src: url('./assets/fonts/MazzardM-Bold.ttf');
+	src: url('./fonts/MazzardM-Bold.ttf');
+	font-weight: 700;
 }
 
 :root {
-	font-family: MazzardM-Regular, sans-serif;
+	font-family: Mazzard-Regular, sans-serif;
 	font-size: 18px;
 }
 
@@ -23,6 +32,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
 }
 
 .text-gradient {
