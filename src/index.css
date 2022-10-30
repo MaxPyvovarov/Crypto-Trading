@@ -1,0 +1,30 @@
+@font-face {
+	font-family: Mazzard-Regular;
+	src: url('./assets/fonts/MazzardM-Regular.ttf');
+}
+
+@font-face {
+	font-family: Mazzard-Medium;
+	src: url('./assets/fonts/MazzardM-Medium.ttf');
+}
+
+@font-face {
+	font-family: Mazzard-Bold;
+	src: url('./assets/fonts/MazzardM-Bold.ttf');
+}
+
+:root {
+	font-family: MazzardM-Regular, sans-serif;
+	font-size: 18px;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+.text-gradient {
+	background: linear-gradient(90deg, #487fff 0%, #73b5ff 50%, #cb76ff 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
