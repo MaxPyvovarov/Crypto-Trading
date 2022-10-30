@@ -5,7 +5,7 @@ import styles from './Home.module.scss';
 
 const Home = () => {
 	return (
-		<section className={styles.home}>
+		<section id='home' className={styles.home}>
 			<div>
 				<div className={styles.heading}>
 					<h3>Crypto Trading</h3>
@@ -20,7 +20,7 @@ const Home = () => {
 				</div>
 				<img className={styles.scheme} src={scheme} alt='scheme' />
 			</div>
-			<div className={styles.btnWrapper}>
+			<div className={styles.btn_wrapper}>
 				<button className={styles.btn}>
 					Learn more{' '}
 					<div className={styles.arrow}>

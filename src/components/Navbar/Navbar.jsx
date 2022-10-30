@@ -11,7 +11,7 @@ const Navbar = () => {
 			<a href='#' className={styles.logo}>
 				C
 			</a>
-			<ul className={`${styles.menu} ${active ? 'active' : ''}`}>
+			<ul className={`${styles.menu} ${active ? styles.menu_active : ''}`}>
 				<li>
 					<a href='#'>Activities</a>
 				</li>
@@ -32,7 +32,9 @@ const Navbar = () => {
 				</li>
 			</ul>
 			<div
-				className={`${styles.hamburger} ${active ? 'active' : ''}`}
+				className={`${styles.hamburger} ${
+					active ? styles.hamburger_active : ''
+				}`}
 				onClick={() => setActive(prev => !prev)}
 			>
 				<span className={styles.bar}></span>
