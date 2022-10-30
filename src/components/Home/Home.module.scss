@@ -69,6 +69,7 @@
 
 .btn {
 	display: flex;
+	align-items: center;
 	color: #fff;
 	cursor: pointer;
 	font-family: Mazzard-Medium;
@@ -76,9 +77,19 @@
 	font-size: 1rem;
 	background: linear-gradient(140.6deg, #3e6ff9 -27.18%, #3e53f8 126.06%);
 	box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
+	transition: all 0.3s ease-in-out;
 	border: none;
 	border-radius: 10px;
 	padding: 0.7rem 1rem;
+
+	&:hover {
+		box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.8);
+		.arrow {
+			img {
+				animation: bounce 0.3s alternate ease-in-out infinite;
+			}
+		}
+	}
 }
 
 .arrow {
@@ -100,4 +111,13 @@
 	margin-top: 6.5rem;
 	max-width: 1rem;
 	align-self: center;
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(3px);
+	}
 }

@@ -8,7 +8,9 @@ const Navbar = () => {
 
 	return (
 		<nav className={styles.navbar}>
-			<p className={styles.logo}>C</p>
+			<a href='#' className={styles.logo}>
+				C
+			</a>
 			<ul className={`${styles.menu} ${active ? 'active' : ''}`}>
 				<li>
 					<a href='#'>Activities</a>
