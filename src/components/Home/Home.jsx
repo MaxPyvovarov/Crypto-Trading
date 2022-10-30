@@ -1,5 +1,5 @@
 import React from 'react';
-import {scheme, arrowDown} from '../../assets';
+import {scheme, arrowDown, scroll} from '../../assets';
 
 import styles from './Home.module.scss';
 
@@ -28,6 +28,7 @@ const Home = () => {
 					</div>
 				</button>
 			</div>
+			<img className={styles.scroll} src={scroll} alt='scroll down' />
 		</section>
 	);
 };
