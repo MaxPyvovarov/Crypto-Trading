@@ -10,6 +10,14 @@
 	max-width: 1440px;
 	padding: 0 135px;
 	margin: 0 auto;
+	position: relative;
+
+	.banner {
+		position: absolute;
+		left: 0;
+		top: 10%;
+		pointer-events: none;
+	}
 
 	@media (max-width: $md) {
 		padding: 0 2rem;
