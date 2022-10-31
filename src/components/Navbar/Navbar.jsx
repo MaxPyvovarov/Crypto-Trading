@@ -6,6 +6,10 @@ import {arrowUp} from '../../assets';
 const Navbar = () => {
 	const [active, setActive] = useState(false);
 
+	const clickHandler = () => {
+		setActive(prev => !prev);
+	};
+
 	return (
 		<nav className={styles.navbar}>
 			<a href='#' className={styles.logo}>
@@ -13,16 +17,24 @@ const Navbar = () => {
 			</a>
 			<ul className={`${styles.menu} ${active ? styles.menu_active : ''}`}>
 				<li>
-					<a href='#'>Activities</a>
+					<a href='#home' onClick={clickHandler}>
+						Activities
+					</a>
 				</li>
 				<li>
-					<a href='#'>Technology</a>
+					<a href='#about' onClick={clickHandler}>
+						Technology
+					</a>
 				</li>
 				<li>
-					<a href='#'>R&D</a>
+					<a href='#rd' onClick={clickHandler}>
+						R&D
+					</a>
 				</li>
 				<li>
-					<a href='#'>Community</a>
+					<a href='#community' onClick={clickHandler}>
+						Community
+					</a>
 				</li>
 				<li>
 					<button className={styles.career}>
