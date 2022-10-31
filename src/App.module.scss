@@ -27,7 +27,12 @@
 
 .circles {
 	position: absolute;
-	top: 25%;
+	top: 42rem;
 	right: 0;
 	z-index: 1;
+	max-width: 70rem;
+
+	@media (max-width: $md) {
+		right: -35rem;
+	}
 }

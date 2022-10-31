@@ -22,8 +22,8 @@
 		width: 30rem;
 		height: 20rem;
 		position: absolute;
-		left: -23%;
-		top: -24%;
+		left: -14rem;
+		top: -10rem;
 		background: radial-gradient(
 			50% 50% at 50% 50%,
 			rgba(255, 255, 255, 0.1) 0%,
@@ -36,8 +36,8 @@
 		width: 30rem;
 		height: 23rem;
 		position: absolute;
-		left: 0%;
-		top: -40%;
+		left: 0;
+		top: -10rem;
 		background: radial-gradient(
 			50% 50% at 50% 50%,
 			rgba(40, 0, 153, 0.13) 0%,
@@ -47,8 +47,8 @@
 
 	@media (max-width: $sm) {
 		&:before {
-			left: -35%;
-			top: -40%;
+			left: -12rem;
+			top: -10rem;
 		}
 
 		&:after {
