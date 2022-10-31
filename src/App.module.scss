@@ -4,22 +4,30 @@
 	width: 100%;
 	overflow: hidden;
 	background: #000;
+	min-height: 3304px;
+	position: relative;
 }
 
 .container {
 	max-width: 1440px;
 	padding: 0 135px;
 	margin: 0 auto;
-	position: relative;
 
 	.banner {
 		position: absolute;
 		left: 0;
-		top: 10%;
+		top: 0;
 		pointer-events: none;
 	}
 
 	@media (max-width: $md) {
 		padding: 0 2rem;
 	}
+}
+
+.circles {
+	position: absolute;
+	top: 25%;
+	right: 0;
+	z-index: 1;
 }

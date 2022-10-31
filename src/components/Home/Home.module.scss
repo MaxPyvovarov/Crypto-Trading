@@ -4,11 +4,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 4rem 0;
-
-	> * {
-		z-index: 3;
-	}
+	padding-top: 4rem;
+	position: relative;
+	z-index: 3;
 
 	& > div {
 		display: flex;
@@ -24,8 +22,8 @@
 		width: 30rem;
 		height: 20rem;
 		position: absolute;
-		left: -20%;
-		top: -25%;
+		left: -35%;
+		top: -40%;
 		background: radial-gradient(
 			50% 50% at 50% 50%,
 			rgba(255, 255, 255, 0.1) 0%,
@@ -38,8 +36,8 @@
 		width: 30rem;
 		height: 23rem;
 		position: absolute;
-		left: 10%;
-		top: -23%;
+		left: 0%;
+		top: -40%;
 		background: radial-gradient(
 			50% 50% at 50% 50%,
 			rgba(40, 0, 153, 0.13) 0%,
@@ -77,6 +75,16 @@
 		font-size: 1.5rem;
 	}
 
+	@media (max-width: $lg) {
+		h1 {
+			font-size: 4rem;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+		}
+	}
+
 	@media (max-width: $sm) {
 		flex-direction: column;
 		align-items: center;
@@ -99,18 +107,26 @@
 
 .scheme {
 	position: absolute;
-	right: 0;
-	top: 28%;
+	max-width: 480px;
+	right: -15%;
+	top: 20%;
 	background: radial-gradient(
 		50% 50% at 50% 50%,
 		rgba(255, 255, 255, 0.09) 0%,
 		rgba(196, 196, 196, 0) 100%
 	);
-	z-index: 1;
+	z-index: 0;
 
 	@media (max-width: $md) {
 		max-width: 450px;
-		top: 80%;
+		top: 90%;
+		right: 0;
+	}
+
+	@media (max-width: $ss) {
+		max-width: 350px;
+		right: -10%;
+		top: 100%;
 	}
 }
 
