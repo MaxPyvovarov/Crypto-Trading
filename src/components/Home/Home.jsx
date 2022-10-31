@@ -10,16 +10,15 @@ const Home = () => {
 				<div className={styles.heading}>
 					<h3>Crypto Trading</h3>
 					<h1>
-						Engineers Meet <br />
-						<span className='text-gradient'>Traders _</span>
+						Engineers Meet <span className='text-gradient'>Traders _</span>
 					</h1>
 					<p>
 						Advanced crypto algorithmic trading and efficient
 						<br /> cross-chain execution, at scale.
 					</p>
 				</div>
-				<img className={styles.scheme} src={scheme} alt='scheme' />
 			</div>
+			<img className={styles.scheme} src={scheme} alt='scheme' />
 			<div className={styles.btn_wrapper}>
 				<button className={styles.btn}>
 					Learn more{' '}

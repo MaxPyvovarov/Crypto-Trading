@@ -1,3 +1,5 @@
+@import '../../variables.module.scss';
+
 .home {
 	display: flex;
 	flex-direction: column;
@@ -11,6 +13,10 @@
 	& > div {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width: $md) {
+			flex-direction: column;
+		}
 	}
 
 	&:before {
@@ -33,6 +39,7 @@
 	flex-direction: column;
 	color: #fff;
 	gap: 1.8rem;
+	max-width: 40rem;
 
 	h3 {
 		color: #aaa;
@@ -49,6 +56,25 @@
 		color: #e9e9e9;
 		font-size: 1.5rem;
 	}
+
+	@media (max-width: $md) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		h1 {
+			font-size: 2.9rem;
+			max-width: 19rem;
+		}
+
+		h3 {
+			font-size: 0.8rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
 }
 
 .scheme {
@@ -60,6 +86,12 @@
 		rgba(255, 255, 255, 0.09) 0%,
 		rgba(196, 196, 196, 0) 100%
 	);
+	z-index: 1;
+
+	@media (max-width: $md) {
+		max-width: 450px;
+		top: 80%;
+	}
 }
 
 .btn_wrapper {
@@ -111,6 +143,10 @@
 	margin-top: 6.5rem;
 	max-width: 1rem;
 	align-self: center;
+
+	@media (max-width: $md) {
+		display: none;
+	}
 }
 
 @keyframes bounce {
