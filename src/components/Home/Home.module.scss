@@ -22,15 +22,15 @@
 		width: 30rem;
 		height: 20rem;
 		position: absolute;
-		left: -35%;
-		top: -40%;
+		left: -23%;
+		top: -24%;
 		background: radial-gradient(
 			50% 50% at 50% 50%,
 			rgba(255, 255, 255, 0.1) 0%,
 			rgba(196, 196, 196, 0) 100%
 		);
 	}
-	&::after {
+	&:after {
 		content: ' ';
 		display: none;
 		width: 30rem;
@@ -46,6 +46,11 @@
 	}
 
 	@media (max-width: $sm) {
+		&:before {
+			left: -35%;
+			top: -40%;
+		}
+
 		&:after {
 			display: block;
 		}
@@ -115,18 +120,17 @@
 		rgba(255, 255, 255, 0.09) 0%,
 		rgba(196, 196, 196, 0) 100%
 	);
-	z-index: 0;
+	z-index: 1;
 
 	@media (max-width: $md) {
 		max-width: 450px;
-		top: 90%;
+		top: 105%;
 		right: 0;
 	}
 
 	@media (max-width: $ss) {
 		max-width: 350px;
 		right: -10%;
-		top: 100%;
 	}
 }
 
@@ -177,8 +181,11 @@
 
 .scroll {
 	margin-top: 6.5rem;
-	max-width: 1rem;
 	align-self: center;
+
+	img {
+		max-width: 1rem;
+	}
 
 	@media (max-width: $md) {
 		display: none;

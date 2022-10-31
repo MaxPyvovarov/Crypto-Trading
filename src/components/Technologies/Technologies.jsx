@@ -1,10 +1,10 @@
 import React from 'react';
 
-import styles from './Chart.module.scss';
+import styles from './Technologies.module.scss';
 import {chart} from '../../assets';
 
 const Chart = () => (
-	<section id='technology' className={styles.technology}>
+	<section id='technologies' className={styles.technologies}>
 		<div className={styles.heading}>
 			<h3>About us</h3>
 			<h1>Global technologies</h1>

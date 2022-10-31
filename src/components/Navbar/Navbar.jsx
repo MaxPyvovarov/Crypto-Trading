@@ -22,7 +22,7 @@ const Navbar = () => {
 					</a>
 				</li>
 				<li>
-					<a href='#about' onClick={clickHandler}>
+					<a href='#technologies' onClick={clickHandler}>
 						Technology
 					</a>
 				</li>

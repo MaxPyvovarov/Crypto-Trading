@@ -1,6 +1,6 @@
 import styles from './App.module.scss';
 
-import {Navbar, Home, Chart} from './components';
+import {Navbar, Home, Technologies} from './components';
 import {banner, circles} from './assets';
 
 const App = () => (
@@ -9,7 +9,7 @@ const App = () => (
 			<Navbar />
 			<img className={styles.banner} src={banner} alt='banner' />
 			<Home />
-			<Chart />
+			<Technologies />
 			<img src={circles} alt='background' className={styles.circles} />
 		</div>
 	</div>

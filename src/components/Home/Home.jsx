@@ -20,14 +20,16 @@ const Home = () => {
 			</div>
 			<img className={styles.scheme} src={scheme} alt='scheme' />
 			<div className={styles.btn_wrapper}>
-				<button className={styles.btn}>
+				<a href='#technologies' className={styles.btn}>
 					Learn more{' '}
 					<div className={styles.arrow}>
 						<img src={arrowDown} alt='learn more'></img>
 					</div>
-				</button>
+				</a>
 			</div>
-			<img className={styles.scroll} src={scroll} alt='scroll down' />
+			<a href='#technologies' className={styles.scroll}>
+				<img src={scroll} alt='scroll down' />
+			</a>
 		</section>
 	);
 };

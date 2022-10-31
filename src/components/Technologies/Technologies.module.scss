@@ -1,6 +1,6 @@
 @import '../../variables.module.scss';
 
-.technology {
+.technologies {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -10,7 +10,40 @@
 	z-index: 3;
 
 	@media (max-width: $md) {
-		margin-top: 20rem;
+		margin-top: 25rem;
+	}
+
+	&:before {
+		content: ' ';
+		display: block;
+		width: 30rem;
+		height: 23rem;
+		position: absolute;
+		right: -20%;
+		top: -26%;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 65, 218, 0.115) 0%,
+			rgba(40, 0, 153, 0.115) 91.72%
+		);
+		filter: blur(100px);
+		border-radius: 2.71815e7px;
+	}
+	&:after {
+		content: ' ';
+		display: block;
+		width: 30rem;
+		height: 23rem;
+		position: absolute;
+		left: -20%;
+		bottom: -26%;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 65, 218, 0.161) 0%,
+			rgba(40, 0, 153, 0.161) 91.72%
+		);
+		filter: blur(100px);
+		border-radius: 2.71815e7px;
 	}
 }
 
@@ -34,11 +67,24 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 11rem;
+
+	@media (max-width: $md) {
+		gap: 3rem;
+	}
+
+	@media (max-width: $sm) {
+		flex-direction: column;
+		gap: 0;
+	}
 }
 
 .chart {
 	img {
 		max-width: 444px;
+
+		@media (max-width: $md) {
+			max-width: 400px;
+		}
 	}
 }
 
@@ -56,8 +102,25 @@
 		p {
 			margin-left: 2rem;
 			padding-bottom: 1.5rem;
-			line-height: 1.1rem;
+			line-height: 1.2rem;
 			font-weight: 400;
+			position: relative;
+
+			&:before {
+				content: url('../../assets/triangle-blue.png');
+				position: absolute;
+				left: -2.5rem;
+				top: 0.9rem;
+				width: 10px;
+				height: 20px;
+				background: no-repeat;
+			}
+
+			&:nth-child(3) {
+				&:before {
+					content: url('../../assets/triangle-pink.png');
+				}
+			}
 		}
 	}
 }
