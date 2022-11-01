@@ -1,3 +1,5 @@
+@import '../../variables.module.scss';
+
 .rd {
 	display: flex;
 	align-items: center;
@@ -5,11 +7,44 @@
 	margin-top: 10rem;
 	position: relative;
 	z-index: 4;
+
+	@media (max-width: $md) {
+	}
+
+	&:before {
+		content: ' ';
+		display: block;
+		width: 30rem;
+		rotate: 131deg;
+		height: 30rem;
+		position: absolute;
+		right: -5rem;
+		top: -10rem;
+		background: linear-gradient(180deg, #333 0%, #000 100%);
+		filter: blur(150px);
+		z-index: 0;
+	}
+	&:after {
+		content: ' ';
+		display: block;
+		width: 20rem;
+		rotate: 131deg;
+		height: 20rem;
+		position: absolute;
+		left: 20rem;
+		bottom: -19rem;
+		background: #333;
+		opacity: 0.5;
+		filter: blur(100px);
+		z-index: 0;
+	}
 }
 
 .scheme {
 	display: flex;
 	align-items: flex-end;
+	position: relative;
+	z-index: 4;
 	gap: 2rem;
 
 	p {
@@ -64,7 +99,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 1.5rem;
 		min-width: 12.2rem;
 		padding: 0.5rem 1.1rem 4rem;
 		border: 1px solid #5a5a5a;
@@ -79,6 +113,7 @@
 
 		figure {
 			text-align: center;
+			margin-bottom: 1.5rem;
 		}
 
 		figcaption {
@@ -86,7 +121,60 @@
 		}
 
 		p {
-			width: 80%;
+			&:nth-child(1) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}
+
+.arrows {
+	position: relative;
+
+	div {
+		position: absolute;
+		content: ' ';
+		width: 2px;
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0) 0%,
+			#fafafa 102.25%
+		);
+		height: 4.5rem;
+		bottom: -6rem;
+
+		&:nth-child(1) {
+			right: 0.7rem;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #aaa 100%);
+
+			&:after {
+				content: ' ';
+				border: solid #ddd;
+				border-width: 0 1px 1px 0;
+				display: inline-block;
+				position: absolute;
+				bottom: -5px;
+				left: -1.6px;
+				padding: 3px;
+				rotate: 45deg;
+			}
+		}
+
+		&:nth-child(2) {
+			left: 0.7rem;
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #aaa 100%);
+
+			&:after {
+				content: ' ';
+				border: solid #ddd;
+				border-width: 0 1px 1px 0;
+				display: inline-block;
+				position: absolute;
+				top: -5px;
+				left: -2.4px;
+				padding: 3px;
+				rotate: -135deg;
+			}
 		}
 	}
 }
@@ -95,6 +183,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1.2rem;
+	position: relative;
 
 	h2 {
 		font-size: 2.2rem;

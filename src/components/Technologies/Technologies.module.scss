@@ -13,6 +13,10 @@
 		margin-top: 25rem;
 	}
 
+	@media (max-width: $ss) {
+		margin-top: 18rem;
+	}
+
 	&:before {
 		content: ' ';
 		display: block;
@@ -68,6 +72,10 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 11rem;
+
+	@media (max-width: $lg) {
+		gap: 5rem;
+	}
 
 	@media (max-width: $md) {
 		gap: 3rem;

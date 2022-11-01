@@ -23,8 +23,14 @@ const Scheme = () => (
 						active traders
 					</figcaption>
 				</figure>
-				<p>Indexing</p>
-				<p>API</p>
+				<div>
+					<p>Indexing</p>
+					<p>API</p>
+				</div>
+				<div className={styles.arrows}>
+					<div></div>
+					<div></div>
+				</div>
 			</div>
 		</div>
 		<div className={styles.caption}>
