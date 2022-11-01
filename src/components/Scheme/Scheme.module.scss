@@ -8,11 +8,6 @@
 	position: relative;
 	z-index: 4;
 
-	@media (max-width: $lg) {
-		flex-direction: column-reverse;
-		margin-top: 5rem;
-	}
-
 	&:before {
 		content: ' ';
 		display: block;
@@ -39,6 +34,30 @@
 		opacity: 0.5;
 		filter: blur(100px);
 		z-index: 0;
+	}
+
+	@media (max-width: $lg) {
+		flex-direction: column-reverse;
+		margin-top: 5rem;
+	}
+
+	@media (max-width: $ss) {
+		&:before {
+			width: 22rem;
+			height: 22rem;
+		}
+
+		&:after {
+			width: 20rem;
+			height: 25rem;
+			position: absolute;
+			left: -7rem;
+			top: 100%;
+			bottom: 0;
+			background: rgba(0, 0, 254, 0.4);
+			filter: blur(150px);
+			z-index: 0;
+		}
 	}
 }
 
@@ -280,6 +299,8 @@
 
 		@media (max-width: $sm) {
 			padding-top: 1rem;
+			padding-bottom: 3rem;
+
 			div {
 				order: -1;
 				display: flex;
@@ -346,6 +367,11 @@
 				rotate: -135deg;
 			}
 		}
+
+		@media (max-width: $ss) {
+			height: 3.5rem;
+			bottom: -5rem;
+		}
 	}
 
 	.consumers {
@@ -356,6 +382,10 @@
 		font-size: 0.9rem;
 		background: none;
 		text-shadow: -1px 0 0 #000;
+
+		@media (max-width: $ss) {
+			bottom: -7rem;
+		}
 	}
 }
 
@@ -378,5 +408,21 @@
 	a {
 		color: #7b93ff;
 		font-size: 0.85rem;
+	}
+
+	@media (max-width: $ss) {
+		&:before {
+			content: ' ';
+			display: block;
+			width: 10rem;
+			rotate: 131deg;
+			height: 10rem;
+			position: absolute;
+			right: -5rem;
+			top: 7rem;
+			background: rgba(0, 0, 254, 0.5);
+			filter: blur(150px);
+			z-index: 0;
+		}
 	}
 }
