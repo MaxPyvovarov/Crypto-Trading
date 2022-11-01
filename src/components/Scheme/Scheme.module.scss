@@ -4,7 +4,7 @@
 	display: flex;
 	align-items: center;
 	gap: 2.5rem;
-	margin-top: 10rem;
+	margin: 10rem 0;
 	position: relative;
 	z-index: 4;
 
@@ -68,6 +68,15 @@
 		font-size: 0.8rem;
 		line-height: 1.1rem;
 	}
+
+	@media (max-width: $sm) {
+		flex-direction: column;
+		align-items: center;
+
+		p {
+			padding: 1rem;
+		}
+	}
 }
 .form {
 	&__1 {
@@ -105,6 +114,50 @@
 					right: -2.5rem;
 				}
 			}
+
+			@media (max-width: $sm) {
+				&:nth-child(1) {
+					padding: 0.45rem 1rem;
+				}
+
+				&:nth-child(1),
+				&:nth-child(2) {
+					&:after {
+						width: 1px;
+						height: 2.05rem;
+						top: 100%;
+						left: 50%;
+					}
+				}
+
+				&:nth-child(3) {
+					&:after {
+						width: 1px;
+						height: 8rem;
+						left: 50%;
+						top: 100%;
+					}
+				}
+			}
+
+			@media (max-width: 435px) {
+				&:nth-child(2) {
+					padding: 0.5rem;
+				}
+			}
+		}
+
+		@media (max-width: $sm) {
+			flex-direction: row;
+			padding: 5rem 1.5rem 2rem;
+			gap: 2rem;
+
+			p {
+				&:nth-child(3) {
+					position: absolute;
+					top: 1rem;
+				}
+			}
 		}
 	}
 
@@ -125,6 +178,13 @@
 			width: 1px;
 			height: 4.51rem;
 			background: #b7b6bb;
+
+			@media (max-width: $sm) {
+				height: 1px;
+				width: 10.13rem;
+				top: -2rem;
+				left: 4.05rem;
+			}
 		}
 
 		p {
@@ -137,6 +197,25 @@
 				height: 1px;
 				background: linear-gradient(90deg, #b7b6bb 0%, #5e5971 102.25%);
 			}
+
+			@media (max-width: $sm) {
+				&:nth-child(2) {
+					padding: 0.45rem 1rem;
+				}
+
+				&:after {
+					top: -2rem;
+					left: 50%;
+					width: 1px;
+					height: 2rem;
+				}
+			}
+		}
+
+		@media (max-width: $sm) {
+			margin: 2rem 0 0;
+			flex-direction: row;
+			gap: 2rem;
 		}
 	}
 
@@ -182,9 +261,38 @@
 					width: 13rem;
 					left: -13rem;
 				}
+
+				@media (max-width: $sm) {
+					width: 1px;
+					height: 3.2rem;
+					top: -3.2rem;
+					left: 50%;
+				}
 			}
 			&:nth-child(1) {
 				margin-bottom: 1.5rem;
+
+				@media (max-width: $sm) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		@media (max-width: $sm) {
+			padding-top: 1rem;
+			div {
+				order: -1;
+				display: flex;
+				flex-direction: row;
+				gap: 3rem;
+
+				p {
+					min-width: 7.2rem;
+				}
+			}
+
+			.arrows {
+				order: 1;
 			}
 		}
 	}
@@ -216,7 +324,7 @@
 				display: inline-block;
 				position: absolute;
 				bottom: -5px;
-				left: -1.6px;
+				left: -2.1px;
 				padding: 3px;
 				rotate: 45deg;
 			}
@@ -238,6 +346,16 @@
 				rotate: -135deg;
 			}
 		}
+	}
+
+	.consumers {
+		display: block;
+		position: absolute;
+		bottom: -8rem;
+		left: -2rem;
+		font-size: 0.9rem;
+		background: none;
+		text-shadow: -1px 0 0 #000;
 	}
 }
 

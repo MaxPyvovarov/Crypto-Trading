@@ -30,6 +30,7 @@ const Scheme = () => (
 				<div className={styles.arrows}>
 					<div></div>
 					<div></div>
+					<span className={styles.consumers}>Consumers</span>
 				</div>
 			</div>
 		</div>
