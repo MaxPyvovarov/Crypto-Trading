@@ -1,6 +1,6 @@
 import styles from './App.module.scss';
 
-import {Navbar, Home, Technologies, Scheme} from './components';
+import {Navbar, Home, Technologies, Scheme, Community} from './components';
 import {banner, circles} from './assets';
 
 const App = () => (
@@ -12,6 +12,7 @@ const App = () => (
 			<Technologies />
 			<img src={circles} alt='background' className={styles.circles} />
 			<Scheme />
+			<Community />
 		</div>
 	</div>
 );
