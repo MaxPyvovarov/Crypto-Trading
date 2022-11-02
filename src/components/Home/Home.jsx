@@ -1,11 +1,21 @@
 import React from 'react';
 import {scheme, arrowDown, scroll} from '../../assets';
+import {motion} from 'framer-motion';
+import {Animation} from '../../main';
 
 import styles from './Home.module.scss';
 
 const Home = () => {
 	return (
-		<section id='home' className={styles.home}>
+		<motion.section
+			id='home'
+			className={styles.home}
+			initial='hidden'
+			whileInView='visible'
+			transition={{duration: 1}}
+			variants={Animation}
+			viewport={{once: true}}
+		>
 			<div>
 				<div className={styles.heading}>
 					<h3>Crypto Trading</h3>
@@ -30,7 +40,7 @@ const Home = () => {
 			<a href='#technologies' className={styles.scroll}>
 				<img src={scroll} alt='scroll down' />
 			</a>
-		</section>
+		</motion.section>
 	);
 };
 

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 
 import styles from './Community.module.scss';
 import {form1, form1Mobile, form2} from '../../assets';
+import {motion} from 'framer-motion';
+import {Animation} from '../../main';
 
 const Community = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -11,8 +13,17 @@ const Community = () => {
 			setWidth(window.innerWidth);
 		});
 	}, []);
+
 	return (
-		<section id='community' className={styles.community}>
+		<motion.section
+			id='community'
+			className={styles.community}
+			initial='hidden'
+			whileInView='visible'
+			transition={{duration: 1}}
+			variants={Animation}
+			viewport={{once: true}}
+		>
 			<div>
 				<div className={styles.formWrapper}>
 					<div className={`${styles.form} ${styles.spot}`}>
@@ -65,7 +76,7 @@ const Community = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

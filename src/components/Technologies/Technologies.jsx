@@ -2,9 +2,19 @@ import React from 'react';
 
 import styles from './Technologies.module.scss';
 import {chart} from '../../assets';
+import {motion} from 'framer-motion';
+import {Animation} from '../../main';
 
 const Chart = () => (
-	<section id='technologies' className={styles.technologies}>
+	<motion.section
+		id='technologies'
+		className={styles.technologies}
+		initial='hidden'
+		whileInView='visible'
+		transition={{duration: 1}}
+		variants={Animation}
+		viewport={{once: true}}
+	>
 		<div className={styles.heading}>
 			<h3>About us</h3>
 			<h1>Global technologies</h1>
@@ -29,7 +39,7 @@ const Chart = () => (
 				<button className={styles.btn}>Start now</button>
 			</div>
 		</div>
-	</section>
+	</motion.section>
 );
 
 export default Chart;

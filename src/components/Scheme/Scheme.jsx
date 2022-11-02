@@ -2,9 +2,19 @@ import React from 'react';
 import {vector} from '../../assets';
 
 import styles from './Scheme.module.scss';
+import {motion} from 'framer-motion';
+import {Animation} from '../../main';
 
 const Scheme = () => (
-	<section id='r&d' className={styles.rd}>
+	<motion.section
+		id='rd'
+		className={styles.rd}
+		initial='hidden'
+		whileInView='visible'
+		transition={{duration: 1}}
+		variants={Animation}
+		viewport={{once: true}}
+	>
 		<div className={styles.scheme}>
 			<div className={styles.form__1}>
 				<p>Artificial Intelligence</p>
@@ -45,7 +55,7 @@ const Scheme = () => (
 			</p>
 			<a href='#'>Learn more</a>
 		</div>
-	</section>
+	</motion.section>
 );
 
 export default Scheme;
