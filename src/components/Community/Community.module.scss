@@ -91,6 +91,12 @@
 		border-radius: 46px;
 		padding: 4px;
 		height: 100%;
+		z-index: 6;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			animation: float 3s infinite;
+		}
 	}
 
 	&__right {
@@ -240,4 +246,19 @@
 .highlight {
 	color: #fff;
 	font-weight: 600;
+}
+
+@keyframes float {
+	from {
+		box-shadow: 0 5px 15px 0px rgba(70, 70, 70, 0.6);
+		translate: 0 0px;
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(70, 70, 70, 0.2);
+		translate: 0 -15px;
+	}
+	to {
+		box-shadow: 0 5px 15px 0px rgba(70, 70, 70, 0.6);
+		translate: 0 0px;
+	}
 }

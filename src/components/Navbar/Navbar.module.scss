@@ -8,7 +8,7 @@
 	right: 0;
 	align-items: center;
 	justify-content: center;
-	gap: 20%;
+	gap: 32%;
 	width: 100%;
 	padding: 1rem 0;
 	color: #fff;
@@ -22,6 +22,18 @@
 
 	@media (max-width: $xxs) {
 		padding: 1rem;
+	}
+
+	@media (min-width: 1800px) {
+		gap: 30%;
+	}
+
+	@media (min-width: 2000px) {
+		gap: 25%;
+	}
+
+	@media (min-width: 2000px) {
+		gap: 20%;
 	}
 
 	@media (min-width: 3500px) {
