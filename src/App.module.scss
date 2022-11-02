@@ -4,7 +4,6 @@
 	width: 100%;
 	overflow: hidden;
 	background: #000;
-	min-height: 2500px;
 	position: relative;
 }
 
@@ -16,6 +15,10 @@
 	.banner {
 		position: absolute;
 		top: 0;
+
+		@media (max-width: $xxs) {
+			left: -110%;
+		}
 	}
 
 	@media (max-width: $md) {
@@ -23,7 +26,7 @@
 	}
 
 	@media (max-width: $ss) {
-		padding: 0 1rem;
+		padding: 0 1.5rem;
 	}
 }
 

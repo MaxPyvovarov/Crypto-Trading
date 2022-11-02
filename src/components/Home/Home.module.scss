@@ -113,8 +113,8 @@
 .scheme {
 	position: absolute;
 	max-width: 480px;
-	right: -15%;
-	top: 20%;
+	right: -9rem;
+	top: 9rem;
 	background: radial-gradient(
 		50% 50% at 50% 50%,
 		rgba(255, 255, 255, 0.09) 0%,
@@ -124,13 +124,18 @@
 
 	@media (max-width: $md) {
 		max-width: 450px;
-		top: 105%;
-		right: 0;
+		top: 32rem;
+		right: -5rem;
 	}
 
 	@media (max-width: $ss) {
 		max-width: 350px;
-		right: -10%;
+		right: -2rem;
+	}
+
+	@media (max-width: $xxs) {
+		right: -5rem;
+		top: 35rem;
 	}
 }
 

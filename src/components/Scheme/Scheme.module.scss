@@ -152,7 +152,7 @@
 				&:nth-child(3) {
 					&:after {
 						width: 1px;
-						height: 8rem;
+						height: 8.2rem;
 						left: 50%;
 						top: 100%;
 					}
@@ -161,7 +161,7 @@
 
 			@media (max-width: 435px) {
 				&:nth-child(2) {
-					padding: 0.5rem;
+					padding: 0.44rem 0.8rem;
 				}
 			}
 		}
@@ -177,6 +177,10 @@
 					top: 1rem;
 				}
 			}
+		}
+
+		@media (max-width: $xxs) {
+			max-width: 18rem;
 		}
 	}
 
@@ -315,6 +319,10 @@
 			.arrows {
 				order: 1;
 			}
+		}
+
+		@media (max-width: $xxs) {
+			max-width: 19rem;
 		}
 	}
 }

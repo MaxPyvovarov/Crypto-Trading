@@ -20,7 +20,7 @@ const Home = () => {
 				<div className={styles.heading}>
 					<h3>Crypto Trading</h3>
 					<h1>
-						Engineers Meet <span className='text-gradient'>Traders _</span>
+						Engineers Meet <span className='text-gradient'>Traders __</span>
 					</h1>
 					<p>
 						Advanced crypto algorithmic trading and efficient

@@ -49,9 +49,7 @@
 
 	@media (max-width: $ss) {
 		margin-top: 18rem;
-	}
 
-	@media (max-width: $ss) {
 		&:before {
 			display: none;
 		}
@@ -95,7 +93,7 @@
 
 	@media (max-width: $sm) {
 		flex-direction: column;
-		gap: 0;
+		gap: 2rem;
 	}
 }
 
@@ -112,6 +110,14 @@
 
 		@media (max-width: $ss) {
 			max-width: 350px;
+		}
+
+		@media (max-width: $xs) {
+			max-width: 300px;
+		}
+
+		@media (max-width: $xxs) {
+			max-width: 280px;
 		}
 	}
 }
