@@ -1,17 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import styles from './Navbar.module.scss';
 import {arrowUp} from '../../assets';
 
 const Navbar = () => {
 	const [active, setActive] = useState(false);
+	const [height, setHeight] = useState(window.scrollY);
 
 	const clickHandler = () => {
-		setActive(prev => !prev);
+		if (window.innerWidth < 768) setActive(prev => !prev);
 	};
 
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			setHeight(window.scrollY);
+		});
+	}, []);
+
 	return (
-		<nav className={styles.navbar}>
+		<nav className={`${styles.navbar} ${height > 1 ? styles.sticked : ''}`}>
 			<a href='#' className={styles.logo}>
 				C
 			</a>
