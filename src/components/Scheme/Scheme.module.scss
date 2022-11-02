@@ -390,6 +390,7 @@
 		font-size: 0.9rem;
 		background: none;
 		text-shadow: -1px 0 0 #000;
+		word-break: normal;
 
 		@media (max-width: $ss) {
 			bottom: -7rem;
