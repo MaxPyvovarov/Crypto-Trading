@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import styles from './Community.module.scss';
-import {form1, form2} from '../../assets';
+import {form1, form1Mobile, form2} from '../../assets';
 
 const Community = () => {
+	const [width, setWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		window.addEventListener('resize', () => {
+			setWidth(window.innerWidth);
+		});
+	}, []);
 	return (
 		<section id='community' className={styles.community}>
 			<div>
 				<div className={styles.formWrapper}>
 					<div className={`${styles.form} ${styles.spot}`}>
-						<img src={form1} alt='background' />
+						<img src={width > 1200 ? form1 : form1Mobile} alt='background' />
 						<div>
 							<h5>Spot & Margin</h5>
 							<p>
@@ -46,12 +53,14 @@ const Community = () => {
 				</div>
 				<div className={styles.formWrapper}>
 					<div className={`${styles.form} ${styles.mobileApp}`}>
-						<h5>Mobile App</h5>
-						<p>
-							Trade anytime,
-							<span className={styles.highlight}> anywhere</span>
-						</p>
-						<a href='#'>Learn more</a>
+						<div>
+							<h5>Mobile App</h5>
+							<p>
+								Trade anytime,
+								<span className={styles.highlight}> anywhere</span>
+							</p>
+							<a href='#'>Learn more</a>
+						</div>
 						<img src={form2} alt='background' />
 					</div>
 				</div>

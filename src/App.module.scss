@@ -21,6 +21,10 @@
 	@media (max-width: $md) {
 		padding: 0 2rem;
 	}
+
+	@media (max-width: $ss) {
+		padding: 0 1rem;
+	}
 }
 
 .circles {

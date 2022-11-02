@@ -1,3 +1,5 @@
+@import '../../variables.module.scss';
+
 .community {
 	display: flex;
 	align-items: stretch;
@@ -19,6 +21,10 @@
 		);
 		filter: blur(100px);
 		z-index: 1;
+	}
+
+	@media (max-width: $lg) {
+		flex-direction: column;
 	}
 }
 
@@ -95,6 +101,16 @@
 		align-items: center;
 		gap: 1.5rem;
 	}
+
+	@media (max-width: $ss) {
+		h5 {
+			font-size: 0.833rem;
+		}
+
+		&__top {
+			flex-direction: column;
+		}
+	}
 }
 
 .spot {
@@ -118,6 +134,37 @@
 	div {
 		margin-top: 17.67rem;
 		z-index: 5;
+	}
+
+	@media (max-width: $lg) {
+		div {
+			margin: 0 0 1rem;
+		}
+
+		p {
+			margin: 1.2rem 0;
+		}
+
+		img {
+			bottom: -8rem;
+			top: auto;
+			right: 0;
+			left: auto;
+		}
+	}
+
+	@media (max-width: $ss) {
+		div {
+			margin: 0 0 7rem;
+		}
+
+		p {
+			font-size: 1.77rem;
+		}
+
+		img {
+			bottom: -4rem;
+		}
 	}
 }
 
@@ -143,6 +190,18 @@
 		top: 0;
 		right: 0;
 		z-index: 1;
+	}
+
+	@media (max-width: $ss) {
+		div {
+			margin-bottom: 10rem;
+		}
+
+		img {
+			top: auto;
+			bottom: 0;
+			right: -4rem;
+		}
 	}
 }
 

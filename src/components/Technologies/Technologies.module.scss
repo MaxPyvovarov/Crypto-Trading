@@ -7,7 +7,7 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 10rem;
-	z-index: 5;
+	z-index: 6;
 
 	&:before {
 		content: ' ';
@@ -108,6 +108,10 @@
 
 		@media (max-width: $md) {
 			max-width: 400px;
+		}
+
+		@media (max-width: $ss) {
+			max-width: 350px;
 		}
 	}
 }
