@@ -97,7 +97,7 @@
 
 		h1 {
 			font-size: 2.9rem;
-			max-width: 19rem;
+			max-width: 21rem;
 		}
 
 		h3 {
@@ -106,6 +106,18 @@
 
 		p {
 			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: $xs) {
+		h1 {
+			font-size: 2.9rem;
+		}
+	}
+
+	@media (max-width: $xxs) {
+		h1 {
+			font-size: 2.4rem;
 		}
 	}
 }

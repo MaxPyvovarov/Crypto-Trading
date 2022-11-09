@@ -164,6 +164,12 @@
 					padding: 0.44rem 0.8rem;
 				}
 			}
+
+			@media (max-width: 355px) {
+				&:nth-child(1) {
+					padding: 0.45rem 0.5rem;
+				}
+			}
 		}
 
 		@media (max-width: $sm) {
@@ -181,6 +187,10 @@
 
 		@media (max-width: $xxs) {
 			max-width: 18rem;
+		}
+
+		@media (max-width: 355px) {
+			max-width: 16.5rem;
 		}
 	}
 
@@ -207,6 +217,41 @@
 				width: 10.13rem;
 				top: -2rem;
 				left: 4.05rem;
+			}
+
+			@media (max-width: 355px) {
+				width: 9.9rem;
+				left: 3.95rem;
+			}
+
+			@media (max-width: 354px) {
+				width: 9.75rem;
+				left: 3.9rem;
+			}
+
+			@media (max-width: 348px) {
+				width: 9.6rem;
+				left: 3.9rem;
+			}
+
+			@media (max-width: 344px) {
+				width: 9.6rem;
+				left: 3.75rem;
+			}
+
+			@media (max-width: 340px) {
+				width: 9.45rem;
+				left: 3.7rem;
+			}
+
+			@media (max-width: 336px) {
+				width: 9.35rem;
+				left: 3.65rem;
+			}
+
+			@media (max-width: 332px) {
+				width: 9.25rem;
+				left: 3.65rem;
 			}
 		}
 
@@ -298,6 +343,20 @@
 				@media (max-width: $sm) {
 					margin-bottom: 0;
 				}
+
+				@media (max-width: $xxs) {
+					&:after {
+						left: 45%;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				@media (max-width: $xxs) {
+					&:after {
+						left: 53%;
+					}
+				}
 			}
 		}
 
@@ -323,6 +382,16 @@
 
 		@media (max-width: $xxs) {
 			max-width: 19rem;
+		}
+
+		@media (max-width: 355px) {
+			max-width: 16.5rem;
+
+			div {
+				p {
+					min-width: 6rem;
+				}
+			}
 		}
 	}
 }
